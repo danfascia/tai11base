@@ -1,0 +1,9 @@
+@tailwind base;
+
+h1, h2, h3, h4 {
+    @apply font-bold text-gray-900 leading-loose mt-2 mb-3
+}
+
+
+@tailwind components;
+@tailwind utilities;

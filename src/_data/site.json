@@ -1,0 +1,20 @@
+{
+    "title": "11ty Base",
+    "strapline" : "A really great eleventy starter" ,
+    "baseUrl": "https://yourURL.com/",
+    "twitter": "danfascia",
+    "description": "A minimal 11ty base starter structure and a few helpful functions",
+    "favicon" : "images/favicon.png",
+    "featuredImage" : "",
+    
+    "author": {
+      "name": "Daniel Fascia",
+      "email": "youremailaddress@example.com",
+      "twitter": "@danfascia",
+      "avatar": ""
+    },
+
+    "language": "en",
+    
+    "fb_app_id": ""
+  }

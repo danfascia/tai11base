@@ -1,0 +1,14 @@
+node_modules
+.vscode
+.code-workspace
+.cache
+.DS_Store
+.AppleDouble
+.LSOverride
+dist
+.env
+*.log
+npm-debug.*
+*.scssc
+*.log
+*.swp

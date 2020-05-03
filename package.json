@@ -1,0 +1,20 @@
+{
+  "name": "11ty-tai11base",
+  "version": "0.1a",
+  "description": "A base 11ty starter: Take @danfascia/11ty-base + TailwindCSS + PurgeCSS + CSS minify",
+  "main": "index.js",
+  "author": "danfascia",
+  "license": "MIT",
+  "scripts": {
+    "dev": "export NODE_ENV=dev && rm -rf dist && tailwind build ./src/styles/styles.css -o ./dist/styles.css && eleventy --serve",
+    "build": "export NODE_ENV=production && rm -rf dist && eleventy && tailwind build ./src/styles/styles.css -o ./dist/styles.css && postcss ./dist/styles.css -o ./dist/styles.css"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-navigation": "^0.1.5",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "html-minifier": "^4.0.0",
+    "tailwindcss": "^1.4.4"
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{site.language}}" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#22222F">
+    <title>
+        {%- if title -%}
+            {{title}} - {{site.title}}
+        {%- elseif renderData.title -%}
+            {{renderData.title}} - {{site.title}}
+        {%-else-%}
+            {{site.title}} {{site.strapline}}
+        {%- endif -%}
+    </title>
+    <meta name="description" content="{% block description %}{{site.description}}{% endblock %}">
+    <meta name="robots" content="index,follow">
+    <meta name="generator" content="Eleventy">
+    <meta name="subject" content="{{site.description}}">
+
+    {% if site.favicon %}<link rel="icon" href="{{ site.favicon }}" type="image/png" />{% endif %}
+
+    {%- block seo -%} 
+    <!-- This allows the SEO block to be overridable and customisable on a per post/page basis -->
+    
+    <!--Twitter Card-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{site.twitter | replace('@', '') }}">
+    <meta name="twitter:creator" content="@{{site.twitter | replace('@', '') }}">
+    <meta name="twitter:url" content="{{site.baseURL}}{{page.url}}">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="{%-if featuredImage-%}{{featuredImage}}{%-else-%}{{site.featuredImage}}{%-endif-%}" />
+    <meta name="twitter:image:alt" content="Shared image from {{ site.title }}" />
+    
+    <!--Schema-->
+    <link rel="author" href="{{site.baseURL}}">
+    <link rel="publisher" href="{{site.baseURL}}">
+    <meta itemprop="name" content="{{title}}">
+    <meta itemprop="description" content="{{ site.description }}">
+    
+    <!-- Facebook OpenGraph -->
+    <meta property="fb:app_id" content="{{site.fb_app_id}}">
+    <meta property="og:url" content="{{site.baseURL}}{{page.url}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:site_name" content="{{site.title}}">
+    <meta name="og:image" content="{%-if featuredImage-%}{{featuredImage}}{%-else-%}{{site.featuredImage}}{%-endif-%}" />
+    <meta name="og:image:alt" content="Shared image from {{ site.title }}" />
+    {%- endblock -%}
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body {% if bodyClass or home %}class="{{'home ' if page.url == '/'}}{{bodyClass}}"{%- endif -%} >
+<div class="max-w-4xl mx-auto px-5 lg:px-12">
+{%- block main -%}
+{{content | safe}}
+{%- endblock -%}
+</div>
+</body>
+
+</html>

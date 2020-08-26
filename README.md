@@ -4,7 +4,7 @@ Take [11ty-base](https://github.com/danfascia/11ty-base), add [TailwindCSS](http
 
 Additional features it includes on top of [11ty-base](https://github.com/danfascia/11ty-base) are:
 
-* Tailwind 1.4 for build in PurgeCSS goodness 👍🏼
+* Tailwind with built in PurgeCSS goodness 👍🏼
 * CSS minification using [css-nano](https://cssnano.co/) 👍🏼
 
 Please feel free to fork and mutate / improve.

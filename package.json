@@ -10,11 +10,11 @@
     "build": "export NODE_ENV=production && rm -rf dist && eleventy && tailwind build ./src/styles/styles.css -o ./dist/styles.css && postcss ./dist/styles.css -o ./dist/styles.css"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@11ty/eleventy-navigation": "^0.1.5",
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
     "cssnano": "^4.1.10",
     "dotenv": "^8.2.0",
     "html-minifier": "^4.0.0",
-    "tailwindcss": "^1.4.4"
+    "tailwindcss": "^1.7.4"
   }
 }
